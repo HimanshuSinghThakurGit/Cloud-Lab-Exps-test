@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
-const dbURI = "mongodb://root:password@mongo:27017/task-manager?authSource=admin";
+const dbURI =
+  "mongodb://root:password@localhost:27017/task-manager?authSource=admin";
 
 mongoose
   .connect(dbURI, {
