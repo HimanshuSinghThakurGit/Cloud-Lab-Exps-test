@@ -1,4 +1,6 @@
-FROM node:20.04 as build
+# syntax=docker/dockerfile:1
+
+FROM node:20.16.0
 
 WORKDIR /usr/src/app
 
@@ -10,8 +12,8 @@ RUN pnpm install
 
 COPY . .
 
-RUN pnpm build
+RUN ls -la /usr/src/app/node_modules
 
 EXPOSE 5173
 
-CMD ["pnpm", "preview"]
+CMD ["pnpm", "dev"]
